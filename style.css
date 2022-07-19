@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Epilogue', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+    height: 100vh;
+}
+p{
+    font-size: 18px;
+    color: hsl(0, 0%, 41%);
+}
+.mobile-nav{
+    display: none;
+}
+.navbar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+.navbar-item{
+    display: flex;
+}
+.navbar-link{
+    display: flex;
+    margin: 0 1.5rem;
+}
+.navbar-link a{
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+}
+.navbar-link a:hover{
+    color: hsl(0, 0%, 8%);
+}
+.drop-arrow{
+    margin: 0 0.5rem;
+}
+.dropdown-svg:hover{
+    cursor: pointer;
+}
+.register{
+    border: 2px solid hsl(0, 0%, 41%); 
+    border-radius: 15px;
+}
+.register:hover{
+    border: 2px solid hsl(0, 0%, 8%); 
+}
+.register-link{
+    padding: 0.6rem 0.8rem;
+}
+.login-link{
+    padding: 0.6rem 0;
+}
+.menu{
+    display: none;
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 150px 10px;
+}
+.main-image img{
+    width: 80%;
+    height: 500px;
+    margin-left: 70px;
+}
+.main-text{
+    width: 75%;
+    padding-top: 60px;
+}
+.main-text h1{
+    font-weight: bold;
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+.main-text p{
+    color: hsl(0, 0%, 41%);
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+.main-text button{
+    font-family: 'Epilogue', sans-serif;
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 8%);
+    border-radius: 10px;
+    font-weight: bolder;
+    padding: 0.7rem 1rem;
+}
+.main-text button:hover{
+    color: hsl(0, 0%, 8%);
+    background-color: hsl(0, 0%, 98%);
+    cursor: pointer;
+}
+.client{
+    margin-top: 100px;
+}
+.client img{
+    width: 90px;
+    padding-right: 10px;
+}
+.features-dropdown, .company-dropdown{
+    background-color: #fff;
+    padding: 0 0.7rem 0.7rem;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    display: none;
+}
+.dropdowns{
+    display: flex;
+    align-items: center;
+}
+.features-dropdown.show, .company-dropdown.show{
+    display: block;
+}
+.features-dropdown-list, .company-dropdown-list{
+    display: flex;
+    margin-top: 0.7rem;
+}
+.features-dropdown-list img{
+    padding-right: 10px;
+}
+
+
+@media screen and (max-width: 1000px){
+    .mobile-nav{
+        display: flex;
+        height: 90px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar{
+        display: block;
+        position: absolute;
+        background-color: #fff;
+        height: calc(100vh + 50px);
+        padding-inline: 20px;
+        top: 0;
+        right: -100%;
+        z-index: 1;
+        transition: ease-out 0.5s;
+    }
+    .navbar .logo{
+        display: none;
+    }
+    .navbar .menu{
+        margin-inline: 0;
+    }
+    .navbar .menu img{
+        margin-left: 200px;
+    }
+    .navbar.show{
+        right: 0;
+    }
+    .navbar-item{
+        display: block;
+    }
+    .login{
+        padding-left: 75px;
+    }
+    .register-link{
+        margin: 0 auto;
+    }
+    .navbar-link{
+        display: flex;
+        margin: 0 1.5rem 1rem;
+    }
+    .toggle-nav{
+        display: flex;
+        height: 90px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar-link{
+        display: flex;
+    }
+    .main{
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 0 3%;
+    }
+    .main-image img{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .main-text{
+        width: 100%;
+    }
+    .features-dropdown, .company-dropdown{
+        margin-left: 20px;
+        padding: 0 0.7rem 0.7rem;
+        position: static;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .client{
+        margin-top: 40px;
+        padding-bottom: 15px;
+    }
+    .client img{
+        height: 20px;
+        width: 100px;
+        padding-right: 10px;
+    }
+}
