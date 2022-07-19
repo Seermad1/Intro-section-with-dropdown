@@ -142,9 +142,8 @@ p{
         height: calc(100vh + 50px);
         padding-inline: 20px;
         top: 0;
-        right: -100%;
+        right: 100%;
         z-index: 1;
-        transition: ease-out 0.5s;
     }
     .navbar .logo{
         display: none;
